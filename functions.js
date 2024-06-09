@@ -99,7 +99,7 @@ var perms = [
 	'hide_document_history_log', 'delete_thread', 'admin', 'editable_other_user_document', 'suspend_account', 'ipacl', 
 	'update_thread_status', 'acl', 'nsacl', 'hide_thread_comment', 'grant', 'no_force_recaptcha', 
 	'disable_two_factor_login', 'login_history', 'update_thread_document', 'update_thread_topic', 
-	'aclgroup', 'api_access', 
+	'aclgroup', 'api_access', 'developer', 
 ];
 var disable_autoperms = ['disable_two_factor_login'];
 
@@ -118,7 +118,7 @@ if(hostconfig.debug) perms.push('debug');
 // 삐
 function beep(cnt = 1) { // 경고음 재생
 	for(var i=1; i<=cnt; i++)
-		prt('');
+		prt(' ');
 }
 
 // 입력받기
