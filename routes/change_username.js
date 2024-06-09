@@ -1,4 +1,12 @@
-if(hostconfig.allow_account_rename) router.all(/^\/member\/change_username$/, async(req, res, next) => {
+router.get('/member/change_username', async (req, res) => {
+    var content = `
+        계정명 변경이 비활성화돼 있습니다.
+    `;
+
+    res.send(await render(req, '이름 변경', content, {}, _, null, 'change_username'));
+});
+
+/*if(hostconfig.allow_account_rename) router.all(/^\/member\/change_username$/, async(req, res, next) => {
 	if(!['GET', 'POST'].includes(req.method)) return next();
 	if(!islogin(req)) return res.redirect('/member/login?redirect=%2Fmember%2Fdelete_account');
 	const username = ip_check(req);
@@ -89,3 +97,4 @@ if(hostconfig.allow_account_rename) router.all(/^\/member\/change_username$/, as
 	
 	return res.send(await render(req, '사용자 이름 변경', content, {}, _, error, 'delete_account'));
 });
+*/
