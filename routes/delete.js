@@ -21,7 +21,7 @@ router.all(/^\/delete\/(.*)/, async(req, res, next) => {
 			</div>
 			
             <label>
-				<label><input type=checkbox name=agree id=agreeCheckbox value=Y /> 문서 이동 목적이 아닌, 삭제하기 위함을 확인합니다.</label>
+				<label><input type=checkbox name=agree id=agreeCheckbox value=Y /> 문서 이동 및 일부 내용 제거가 아닌 문서 전체를 삭제하기 위한 기능임을 확인합니다.</label>
             </label>
 			
             <p>
