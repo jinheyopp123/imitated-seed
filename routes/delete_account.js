@@ -1,4 +1,12 @@
-if(hostconfig.allow_account_deletion) router.all(/^\/member\/delete_account$/, async(req, res, next) => {
+router.get('/member/delete_account', async (req, res) => {
+    var content = `
+        계정 삭제가 비활성화돼 있습니다.
+    `;
+
+    res.send(await render(req, '계정 삭제', content, {}, _, null, 'delete_account'));
+});
+
+/*if(hostconfig.allow_account_deletion) router.all(/^\/member\/delete_account$/, async(req, res, next) => {
 	if(!['GET', 'POST'].includes(req.method)) return next();
 	if(!islogin(req)) return res.redirect('/member/login?redirect=%2Fmember%2Fdelete_account');
 	const username = ip_check(req);
@@ -64,3 +72,4 @@ if(hostconfig.allow_account_deletion) router.all(/^\/member\/delete_account$/, a
 	
 	return res.send(await render(req, '계정 삭제', content, {}, _, error, 'delete_account'));
 });
+*/
