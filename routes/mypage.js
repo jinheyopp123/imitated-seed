@@ -80,7 +80,7 @@ if (ver('4.18.6')) {
                 <div class=form-group>
                     <label>사용자 이름</label>
                     <p>${html.escape(ip_check(req))}</p>
-                    <a class="btn btn-info" href="/member/change_username">이름 변경</a>
+                    <a class="btn btn-info" href="/member/change_name">이름 변경</a>
                 </div>
                 
                 <div class=form-group>
@@ -126,7 +126,7 @@ if (ver('4.18.6')) {
 				<div style="overflow: hidden;">
                 <div style="float:right;">
                 <div class=btns>
-					<a class="btn btn-danger" href="/member/delete_account">계정 삭제</a>
+					<a class="btn btn-danger" href="/member/withdraw">계정 삭제</a>
                     <button type=submit class="btn btn-primary">변경</button>
                 </div>
 				</div>
