@@ -1,9 +1,9 @@
-router.get('/member/delete_account', async (req, res) => {
+router.get('/member/withdraw', async (req, res) => {
     var content = `
         계정 삭제가 비활성화돼 있습니다.
     `;
 
-    res.send(await render(req, '계정 삭제', content, {}, _, null, 'delete_account'));
+    res.send(await render(req, '계정 삭제', content, {}, _, null, 'withdraw'));
 });
 
 /*if(hostconfig.allow_account_deletion) router.all(/^\/member\/delete_account$/, async(req, res, next) => {
