@@ -1,9 +1,9 @@
-router.get('/member/change_username', async (req, res) => {
+router.get('/member/change_name', async (req, res) => {
     var content = `
         계정명 변경이 비활성화돼 있습니다.
     `;
 
-    res.send(await render(req, '오류', content, {}, _, null, 'change_username'));
+    res.send(await render(req, '오류', content, {}, _, null, 'change_name'));
 });
 
 /*if(hostconfig.allow_account_rename) router.all(/^\/member\/change_username$/, async(req, res, next) => {
