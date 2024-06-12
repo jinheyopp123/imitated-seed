@@ -23,8 +23,6 @@ router.get(/^\/contribution\/(ip|author)\/(.+)\/document$/, async function docum
 	}
 	
 	var content = `
-		<p>최근 30일동안의 기여 목록 입니다.</p>
-	
 		<ol class="breadcrumb link-nav">
 			<li><strong>[문서]</strong></li>
 			<li><a href="/contribution/${ismember}/${username}/discuss">[토론]</a></li>
